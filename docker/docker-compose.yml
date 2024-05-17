@@ -18,10 +18,10 @@ services:
       postgres_user: graph-node
       postgres_pass: let-me-in
       postgres_db: graph-node
+      GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
       ipfs: 'ipfs:5001'
-      ethereum: 'mainnet:http://host.docker.internal:8545'
-      # ethereum: 'mainnet:http://127.0.0.1:8545/'
-      # ethereum: 'localhost:http://host.docker.internal:8545'
+      # ethereum: 'mainnet:http://host.docker.internal:8545'
+      ethereum: 'base:https://virtual.base.rpc.tenderly.co/7817edf3-f43a-4498-9cf9-c44c0164e1ed'
       GRAPH_LOG: info
   ipfs:
     image: ipfs/kubo:v0.17.0
@@ -29,6 +29,8 @@ services:
       - '5001:5001'
     volumes:
       - ./data/ipfs:/data/ipfs:Z
+    environment:
+      GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
   postgres:
     image: postgres:14
     ports:
