@@ -23,6 +23,8 @@ services:
       # ethereum: 'mainnet:http://host.docker.internal:8545'
       ethereum: 'base:https://virtual.base.rpc.tenderly.co/7817edf3-f43a-4498-9cf9-c44c0164e1ed'
       GRAPH_LOG: info
+      # GRAPH_CORS_ALLOW_ORIGINS: http://localhost:3002 # Replace with your frontend application's origin
+      # GRAPH_CORS_ALLOW_HEADERS: authorization 
   ipfs:
     image: ipfs/kubo:v0.17.0
     ports:
