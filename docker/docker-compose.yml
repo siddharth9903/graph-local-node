@@ -9,7 +9,7 @@ services:
       - '8030:8030'
       - '8040:8040'
     depends_on:
-      - ipfs
+      # - ipfs
       - postgres
     extra_hosts:
       - host.docker.internal:host-gateway
@@ -19,20 +19,23 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
-      ipfs: 'ipfs:5001'
+      # ipfs: 'http://localhost:5002/ipfs'
+      # ipfs: 'http://host.docker.internal:5001'
+      ipfs: 'http://100.27.85.244:5001'
       # ethereum: 'mainnet:http://host.docker.internal:8545'
       ethereum: 'base:https://virtual.base.rpc.tenderly.co/7817edf3-f43a-4498-9cf9-c44c0164e1ed'
       GRAPH_LOG: info
-      # GRAPH_CORS_ALLOW_ORIGINS: http://localhost:3002 # Replace with your frontend application's origin
-      # GRAPH_CORS_ALLOW_HEADERS: authorization 
-  ipfs:
-    image: ipfs/kubo:v0.17.0
-    ports:
-      - '5001:5001'
-    volumes:
-      - ./data/ipfs:/data/ipfs:Z
-    environment:
-      GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
+  # ipfs:
+  #   image: ipfs/kubo:v0.17.0
+  #   ports:
+  #     - '5001:5001'
+  #   volumes:
+  #     - ./data/ipfs:/data/ipfs:Z
+  #   environment:  
+  #     GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
+  #   # sysctls:
+  #   #   net.core.rmem_max: 2621440
+  #   #   net.core.rmem_default: 2621440
   postgres:
     image: postgres:14
     ports:
