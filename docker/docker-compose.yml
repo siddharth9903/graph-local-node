@@ -19,6 +19,7 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
+      GRAPH_ALLOW_NON_DETERMINISTIC_FULLTEXT_SEARCH: true
       # ipfs: 'http://localhost:5002/ipfs'
       # ipfs: 'http://host.docker.internal:5001'
       ipfs: 'http://100.27.85.244:5001'
