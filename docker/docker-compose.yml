@@ -22,10 +22,22 @@ services:
       GRAPH_ALLOW_NON_DETERMINISTIC_FULLTEXT_SEARCH: true
       # ipfs: 'http://localhost:5002/ipfs'
       # ipfs: 'http://host.docker.internal:5001'
-      ipfs: 'http://100.27.85.244:5001'
+      ipfs: 'http://18.206.168.62:5001'
       # ethereum: 'mainnet:http://host.docker.internal:8545'
       ethereum: 'base:https://virtual.base.rpc.tenderly.co/7817edf3-f43a-4498-9cf9-c44c0164e1ed'
+      # ethereum: 'base:https://base.gateway.tenderly.co/7eSxf2jVQXhRN3QZ4bRkBj'
       GRAPH_LOG: info
+
+      # postgres_host: gn-rds-db-ex.cluster-c9keqc40m4bt.us-east-1.rds.amazonaws.com
+      # postgres_user: postgres
+      # postgres_pass: postgres
+      # postgres_db: graph_node_dev
+      # GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
+      # GRAPH_ALLOW_NON_DETERMINISTIC_FULLTEXT_SEARCH: true
+      # ipfs: 'http://18.206.168.62:5001'
+      # ethereum: 'base:https://virtual.base.rpc.tenderly.co/7817edf3-f43a-4498-9cf9-c44c0164e1ed'
+      # GRAPH_LOG: info
+
   # ipfs:
   #   image: ipfs/kubo:v0.17.0
   #   ports:
