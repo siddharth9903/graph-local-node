@@ -26,15 +26,12 @@ services:
       # ipfs: 'http://localhost:5002/ipfs'
       # ipfs: 'http://host.docker.internal:5001'
       # ethereum: 'mainnet:http://host.docker.internal:8545'
-
-      # ipfs: 'http://54.147.64.98:5001'
-      # ethereum: 'base:https://virtual.base.rpc.tenderly.co/c070adf9-120d-4186-95f8-ca0978df9c08'
       
-      # ipfs: 'http://54.147.64.98:5001'
+      # ipfs: 'http://18.208.209.235:5001'
       # ethereum: 'base:https://base.gateway.tenderly.co/5hihJD3KoAdswisWt96oTm'
 
-      ipfs: 'http://54.147.64.98:5001'
-      ethereum: 'baseTenderly:https://virtual.base.rpc.tenderly.co/b67fff04-bd69-4b14-907a-3912e44f3f1d'
+      ipfs: 'http://18.208.209.235:5001'
+      ethereum: 'tenderly:https://virtual.base.rpc.tenderly.co/3f03ea4a-aebd-445c-94ca-22dee8209cb8'
   # ipfs:
   #   image: ipfs/kubo:v0.17.0
   #   ports:
