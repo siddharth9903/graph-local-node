@@ -21,17 +21,10 @@ services:
       GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: true
       GRAPH_ALLOW_NON_DETERMINISTIC_FULLTEXT_SEARCH: true
       GRAPH_LOG: info
-      # GRAPH_START_BLOCK: 16599563
-      
-      # ipfs: 'http://localhost:5002/ipfs'
       # ipfs: 'http://host.docker.internal:5001'
-      # ethereum: 'mainnet:http://host.docker.internal:8545'
-      
-      # ipfs: 'http://18.208.209.235:5001'
-      # ethereum: 'base:https://base.gateway.tenderly.co/5hihJD3KoAdswisWt96oTm'
-
-      ipfs: 'http://18.208.209.235:5001'
-      ethereum: 'tenderly:https://virtual.base.rpc.tenderly.co/3f03ea4a-aebd-445c-94ca-22dee8209cb8'
+      # ipfs: 'http://localhost:5001'
+      ipfs: 'http://54.204.49.39:5001'
+      ethereum: 'merlintestnet:https://merlin-testnet.blockpi.network/v1/rpc/public'
   # ipfs:
   #   image: ipfs/kubo:v0.17.0
   #   ports:
@@ -43,6 +36,7 @@ services:
   #   # sysctls:
   #   #   net.core.rmem_max: 2621440
   #   #   net.core.rmem_default: 2621440
+  
   postgres:
     image: postgres:14
     ports:
